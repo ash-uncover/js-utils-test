@@ -3,8 +3,11 @@ module.exports = {
         "src", 
         "test" 
     ],
+    "moduleNameMapper": {
+        "^.+\\.(css|less|scss)$": "babel-jest"
+    },
     "collectCoverageFrom": [
-        "src/**/*.js",
+        "src/**/*.{js,jsx}",
         "!**/node_modules/**"
     ],
     "coverageDirectory": "test/__coverage__",
