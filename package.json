@@ -1,11 +1,19 @@
 {
   "name": "ap-utils-test",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "description": "javascript test utils",
   "main": "dist/index.js",
+  "types": "dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "prepublishOnly": "npm run build",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
     "test": "jest",
     "test-coverage": "jest --collectCoverage"
   },
@@ -17,11 +25,14 @@
   "license": "ISC",
   "peerDependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-jest": "^22.4.3",
-    "babel-preset-env": "^1.6.1",
-    "jest": "^22.4.3"
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "jest": "latest",
+    "prettier": "latest",
+    "ts-jest": "latest",
+    "tslint": "latest",
+    "tslint-config-prettier": "latest",
+    "typescript": "latest"
   },
   "dependencies": {}
 }
