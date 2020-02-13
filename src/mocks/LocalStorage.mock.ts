@@ -1,5 +1,4 @@
 class LocalStorageMockCreator {
-
   private store: any = {}
 
   constructor() {
