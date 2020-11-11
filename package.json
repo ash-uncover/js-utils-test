@@ -1,7 +1,13 @@
 {
-  "name": "ap-utils-test",
-  "version": "0.1.0",
+  "name": "@uncover/js-utils-test",
+  "version": "0.0.1",
   "description": "javascript test utils",
+  "author": "aSh <ash.uncover@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ash-uncover/js-utils-test"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -18,12 +24,6 @@
     "test-coverage": "jest --collectCoverage",
     "version": "npm run format"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ash-uncover/ap-utils-test"
-  },
-  "author": "aSH <ash.uncover@gmail.com>",
-  "license": "ISC",
   "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "latest",

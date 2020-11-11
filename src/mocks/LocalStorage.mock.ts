@@ -14,7 +14,7 @@ class LocalStorageMockCreator {
   }
 
   setItem(key: string, value: any) {
-    this.store[key] = value.toString()
+    this.store[key] = JSON.stringify(value)
   }
 
   removeItem(key: string) {
